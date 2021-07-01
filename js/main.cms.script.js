@@ -30,7 +30,17 @@ ready(() => {
                     }
                 }
             break;
-        
+            case "open-tab":
+                if (tg != null){
+                    if (tg.style.maxHeight) {
+                        tg.style.maxHeight = null;
+                        el.innerHTML = '<i class="fal fa-plus"></i>';
+                    } else {
+                        tg.style.maxHeight = tg.scrollHeight + "px";
+                        el.innerHTML = '<i class="fal fa-minus"></i>';
+                    }
+                }
+            break;
             default:
                 break;
         }
@@ -42,4 +52,18 @@ ready(() => {
             action(el, el.getAttribute('data-action'), el.getAttribute('data-target'));
         });
     });
+
+    /*
+     * init Select2
+     ***
+    */
+    function init_select2() {
+        let selects = Array();
+        selects.push($('#cms-select-parent'));
+        console.log(selects);
+        selects.forEach(select => {
+            select.select2();
+        });
+    }
+    init_select2();
 });

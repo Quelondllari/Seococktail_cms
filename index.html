@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="/css/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="/css/main.cms.style.css?v=0.0.0.1">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="/css/select2.css">
 </head>
 <body class="panel">
     <!-- Login page -->
@@ -206,36 +208,252 @@
         </section>
 
         <!-- Categories -->
-        <section class="categories grid-table">
+        <section class="categories grid-table" style="display: none;">
             <div class="content-panel cms-categories">
                 <div class="cl-header">
                     <p class="cl-title">Категории страниц</p>
+                    <a href="#?" class="btn cms-cat-btn" data-tooltip="Создать категорию"><i class="fal fa-plus"></i></a>
                 </div>
                 <div class="cl-content">
                     <ul class="cms-categories-list">
                         <li class="cms-cat-item" id="cms-category-0">
-                            <a href="#?">Тестовая категория 1</a>
+                            <a href="#?">Баннер-слайдер</a>
                             <div class="cms-cat-item-stgs">
-                                <a href="#?" data-tooltip="Открыть в новом окне"><i class="fal fa-share"></i></a>
-                                <button class="btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Создать страницу в этой категории"><i class="fal fa-file"></i></a>
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Открыть на сайте в новом окне"><i class="fal fa-share"></i></a>
+                                <button class="btn cms-cat-btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
                             </div>
                         </li>
                         <li class="cms-cat-item">
-                            <a href="#?">Тестовая категория 2</a>
+                            <a href="#?">Наши работы</a>
                             <div class="cms-cat-item-stgs">
-
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Создать страницу в этой категории"><i class="fal fa-file"></i></a>
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Открыть на сайте в новом окне"><i class="fal fa-share"></i></a>
+                                <button class="btn cms-cat-btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
+                            </div>
+                        </li>
+                        <li class="cms-cat-item">
+                            <a href="#?">Наши партнеры</a>
+                            <div class="cms-cat-item-stgs">
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Создать страницу в этой категории"><i class="fal fa-file"></i></a>
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Открыть на сайте в новом окне"><i class="fal fa-share"></i></a>
+                                <button class="btn cms-cat-btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
+                            </div>
+                        </li>
+                        <li class="cms-cat-item">
+                            <a href="#?">Вопрос и ответ</a>
+                            <div class="cms-cat-item-stgs">
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Создать страницу в этой категории"><i class="fal fa-file"></i></a>
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Открыть на сайте в новом окне"><i class="fal fa-share"></i></a>
+                                <button class="btn cms-cat-btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
+                            </div>
+                        </li>
+                        <li class="cms-cat-item">
+                            <a href="#?">Галерея фотографий</a>
+                            <div class="cms-cat-item-stgs">
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Создать страницу в этой категории"><i class="fal fa-file"></i></a>
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Открыть на сайте в новом окне"><i class="fal fa-share"></i></a>
+                                <button class="btn cms-cat-btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
                             </div>
                         </li>
                     </ul>
+                    <button class="btn btn--small" data-tooltip="Отобразить больше страниц">Показать еще</button>
+                </div>
+            </div>
+            <div class="content-panel content-panel--black cms-categories-add" style="display: none;">
+                <div class="cl-header">
+                    <p class="cl-title">Добавление категории</p>
+                </div>
+                <div class="cl-content">
+                    <form action="#?" method="POST">
+                        <div class="cms-cat-form">
+                            <label class="fm_gr-label">
+                                <span>Наименование категории</span>
+                                <input type="text" class="fm_gr-input" placeholder="Наименование">
+                            </label>
+                            <label class="fm_gr-label">
+                                <span>Адрес категории</span>
+                                <input type="text" class="fm_gr-input" placeholder="Адрес категории">
+                            </label>
+                            <label class="fm_gr-label">
+                                <span>Родительская категория</span>
+                                <select name="" id="cms-select-parent">
+                                    <option value="None">Баннер-слайдер</option>
+                                    <option value="None">Наши работы</option>
+                                    <option value="None">Наши партнеры</option>
+                                    <option value="None">Вопрос и ответ</option>
+                                    <option value="None">Без категории</option>
+                                </select>
+                            </label>
+                            <label class="fm_gr-label">
+                                <span>Изображение категории</span>
+                                <input type="file" class="fm_gr-input">
+                            </label>
+                            <div class="fm_gr-label fm_gr-ad">
+                                <div class="fm_gr-ad-h">
+                                    <p>Выбор шаблона</p>
+                                    <button type="button" class="fm_gr-ad-b" data-action="open-tab" data-target="#select-temp"><i class="fal fa-plus"></i></button>
+                                </div>
+                                <div class="fm_gr-ad-bd" id="select-temp">
+                                    <div class="fm_gr-ad-c">
+                                        <label class="fm_gr-label fm_gr-label--radio">
+                                            <input type="radio" name="name1" checked>
+                                            <span class="fm_gr-ro-d"></span>
+                                            <p class="fm_gr-ro-t">template1.tpl</p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fm_gr-label fm_gr-ad">
+                                <div class="fm_gr-ad-h">
+                                    <p>SEO</p>
+                                    <button type="button" class="fm_gr-ad-b" data-action="open-tab" data-target="#input_seo"><i class="fal fa-plus"></i></button>
+                                </div>
+                                <div class="fm_gr-ad-bd" id="input_seo">
+                                    <div class="fm_gr-ad-c">
+                                        <label class="fm_gr-label">
+                                            <span>Title</span>
+                                            <input type="text" class="fm_gr-input" placeholder="Title">
+                                        </label>
+                                        <label class="fm_gr-label">
+                                            <span>H1</span>
+                                            <input type="text" class="fm_gr-input" placeholder="H1">
+                                        </label>
+                                        <label class="fm_gr-label">
+                                            <span>Description</span>
+                                            <textarea name="" class="fm_gr-input" cols="30" placeholder="Description"></textarea>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
 
+        <section class="categories grid-table">
+            <div class="content-panel cms-subcategories">
+                <div class="cl-header">
+                    <p class="cl-title">Баннер-слайдер</p>
+                    <a href="#?" class="btn cms-cat-btn" data-tooltip="Создать подкатегорию"><i class="fal fa-plus"></i></a>
+                </div>
+                <div class="cl-content">
+                    <ul class="cms-categories-list">
+                        <li class="cms-cat-item" id="cms-category-0">
+                            <a href="#?">Баннер-слайдер</a>
+                            <div class="cms-cat-item-stgs">
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Создать страницу в этой категории"><i class="fal fa-file"></i></a>
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Открыть на сайте в новом окне"><i class="fal fa-share"></i></a>
+                                <button class="btn cms-cat-btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
+                            </div>
+                        </li>
+                        <li class="cms-cat-item">
+                            <a href="#?">Наши работы</a>
+                            <div class="cms-cat-item-stgs">
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Создать страницу в этой категории"><i class="fal fa-file"></i></a>
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Открыть на сайте в новом окне"><i class="fal fa-share"></i></a>
+                                <button class="btn cms-cat-btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
+                            </div>
+                        </li>
+                        <li class="cms-cat-item">
+                            <a href="#?">Наши партнеры</a>
+                            <div class="cms-cat-item-stgs">
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Создать страницу в этой категории"><i class="fal fa-file"></i></a>
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Открыть на сайте в новом окне"><i class="fal fa-share"></i></a>
+                                <button class="btn cms-cat-btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
+                            </div>
+                        </li>
+                        <li class="cms-cat-item">
+                            <a href="#?">Вопрос и ответ</a>
+                            <div class="cms-cat-item-stgs">
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Создать страницу в этой категории"><i class="fal fa-file"></i></a>
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Открыть на сайте в новом окне"><i class="fal fa-share"></i></a>
+                                <button class="btn cms-cat-btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
+                            </div>
+                        </li>
+                        <li class="cms-cat-item">
+                            <a href="#?">Галерея фотографий</a>
+                            <div class="cms-cat-item-stgs">
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Создать страницу в этой категории"><i class="fal fa-file"></i></a>
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Открыть на сайте в новом окне"><i class="fal fa-share"></i></a>
+                                <button class="btn cms-cat-btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="btn btn--small" data-tooltip="Отобразить больше страниц">Показать еще</button>
+                </div>
+            </div>
+            <div class="content-panel cms-subpages">
+                <div class="cl-header">
+                    <p class="cl-title">Страницы <small>Категории: Баннер-слайдер</small></p>
+                    <a href="#?" class="btn cms-cat-btn" data-tooltip="Создать страницу"><i class="fal fa-plus"></i></a>
+                </div>
+                <div class="cl-content">
+                    <ul class="cms-categories-list">
+                        <li class="cms-cat-item" id="cms-category-0">
+                            <a href="#?">Баннер-слайдер</a>
+                            <div class="cms-cat-item-stgs">
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Создать страницу в этой категории"><i class="fal fa-file"></i></a>
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Открыть на сайте в новом окне"><i class="fal fa-share"></i></a>
+                                <button class="btn cms-cat-btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
+                            </div>
+                        </li>
+                        <li class="cms-cat-item">
+                            <a href="#?">Наши работы</a>
+                            <div class="cms-cat-item-stgs">
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Создать страницу в этой категории"><i class="fal fa-file"></i></a>
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Открыть на сайте в новом окне"><i class="fal fa-share"></i></a>
+                                <button class="btn cms-cat-btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
+                            </div>
+                        </li>
+                        <li class="cms-cat-item">
+                            <a href="#?">Наши партнеры</a>
+                            <div class="cms-cat-item-stgs">
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Создать страницу в этой категории"><i class="fal fa-file"></i></a>
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Открыть на сайте в новом окне"><i class="fal fa-share"></i></a>
+                                <button class="btn cms-cat-btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
+                            </div>
+                        </li>
+                        <li class="cms-cat-item">
+                            <a href="#?">Вопрос и ответ</a>
+                            <div class="cms-cat-item-stgs">
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Создать страницу в этой категории"><i class="fal fa-file"></i></a>
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Открыть на сайте в новом окне"><i class="fal fa-share"></i></a>
+                                <button class="btn cms-cat-btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
+                            </div>
+                        </li>
+                        <li class="cms-cat-item">
+                            <a href="#?">Галерея фотографий</a>
+                            <div class="cms-cat-item-stgs">
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Создать страницу в этой категории"><i class="fal fa-file"></i></a>
+                                <a class="btn cms-cat-btn" href="#?" data-tooltip="Открыть на сайте в новом окне"><i class="fal fa-share"></i></a>
+                                <button class="btn cms-cat-btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="btn btn--small" data-tooltip="Отобразить больше страниц">Показать еще</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pages in category-->
+        <section class="pages grid-table" style="display: none;">
+            <div class="content-panel cms-pages">
+                <div class="cl-header">
+                    <p class="cl-title">Страницы <small>Подкатегории: Баннер-слайдер</small></p>
+                    <a href="#?" class="btn cms-cat-btn" data-tooltip="Создать страницу"><i class="fal fa-plus"></i></a>
+                </div>
+                <div class="cl-content"></div>
+            </div>
+        </section>
     </main>
     <footer class="footer">
 
     </footer>
 
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/select2.full.min.js"></script>
     <script src="/js/main.cms.script.js"></script>
 </body>
 </html>
