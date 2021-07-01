@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEOCOCKTAIL CMS</title>
+
+    <link rel="stylesheet" href="/css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.cms.style.css?v=0.0.0.1">
+</head>
+<body class="panel">
+    <!-- Login page -->
+    <section class="section_login" style="display: none;">
+        <div class="sn_ln-inner">
+            <div class="sn_ln-sidebar">
+                <h4 class="ln_form-title">
+                    <span>Вход в панель</span>
+                </h4>
+                <form action="/" method="POST" id="cmslogin_form">
+                    <label class="fm_gr-label">
+                        <span>Логин</span>
+                        <input type="text" class="fm_gr-input" placeholder="Логин">
+                    </label>
+                    <label class="fm_gr-label">
+                        <span>Пароль</span>
+                        <input type="password" class="fm_gr-input" placeholder="Пароль">
+                    </label>
+                    <button class="btn ln-btn fm_gr-btn" type="button">
+                        Войти
+                    </button>
+                    <a href="javascript:void(0);" class="fm_gr-link">Забыли пароль?</a>
+                </form>
+                <!-- <span class="seococktail_version">Version SEOCOCKTAIL CMS: 4</span> -->
+            </div>
+            <div class="sn_ln-banner">
+                <img src="/img/logo-white.png" alt="Seococktail CMS">
+                <h1></h1>
+            </div>
+        </div>
+    </section>
+
+    <header class="header">
+        <div class="container">
+            <div class="hr_inner">
+                <a class="hr_cms" href="/">
+                    SEOCOCKTAIL <span>CMS</span>
+                </a>
+                <hr class="hr_line">
+                <nav class="nav hr_nav">
+                    <ul class="nav_list hr_nav-list">
+                        <li class="has-dropdown">
+                            <a href="#?">Страницы <i class="fal fa-clone"></i><span class="down-arrow"></span></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li><a href="#?">Категории</a></li>
+                                    <li><a href="#?">Страницы</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#?">Магазин <i class="fal fa-shopping-basket"></i><span class="down-arrow"></span></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li><a href="#?">Каталог товаров</a></li>
+                                    <li><a href="#?">Характеристики товара</a></li>
+                                    <li><a href="#?">Отзывы к товарвам</a></li>
+                                    <li><a href="#?">Заказы</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="#?">Отзывы сайта <i class="fal fa-comment-alt"></i></a>
+                        </li>
+                        <li>
+                            <a href="#?">Комментарии <i class="fal fa-comments"></i></a>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#?">Личный кабинет <i class="fal fa-user"></i><span class="down-arrow"></span></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li><a href="#?">Пользователи</a></li>
+                                    <li><a href="#?">Глобальная настройка</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="has-dropdown">
+                            <a href="#?">Настройки <i class="fal fa-cog"></i><span class="down-arrow"></span></a>
+                            <div class="dropdown">
+                                <ul>
+                                    <li><a href="#?">Настройки сайта</a></li>
+                                    <li><a href="#?">SMTP настройки</a></li>
+                                    <li><a href="#?">Настройка Robots</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <hr class="hr_line">
+                <div class="hr_user-profile">
+                    <div class="hr_user-settings">
+                        <div class="hr_ur-image">
+                            <img src="/img/test-photo.png" alt="">
+                            <!-- <div class="no-photo"></div> -->
+                        </div>
+                        <div class="hr_user-btns">
+                            <a class="hr_ur-btn" href="#?" data-tooltip="Настройка пользователя"><i class="fal fa-user-cog"></i></a>
+                            <button class="hr_ur-btn" data-tooltip="Выйти с админ. панели"><i class="fal fa-portal-exit"></i></button>
+                        </div>
+                    </div>
+                    <p class="hr_ur-name">Алексей</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <!-- Main page -->
+        <section class="main-page grid-table" style="display: none;">
+            <div class="content-panel cms-update-info">
+                <div class="cl-header">
+                    <p class="cl-title cl-title--bold">Добро пожаловать в SEOCOCKTAIL CMS</p>
+                </div>
+                <div class="cl-content" id="cms-update-info">
+                    <strong>Что изменилось:</strong>
+                    <ul>
+                        <li>
+                            <div>
+                                <b>Обновление до версии 4.0</b>
+                                <p>Изменен дизайн и заного переработана структура админ. панели</p>
+                                <p>Обновлены все плагины, некоторые были заменены на более оптимальный вариант</p>    
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <b>Обновление до версии 3.0</b>
+                                <p> Были проведены работы по рефакторингу всего кода, в результате чего CMS теперь может работать на новых версиях PHP >5.6, что в свою очередь значительно увеличивает скорость работы и дает возможность подключать современные библиотеки для наращивания функционала.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <b>Обновление до версии 2.0</b>
+                                <p>Добавлена возможность копирования страниц контента.</p>
+                                <p>Добавлен редактор для <code>robots.txt</code></p>
+                                <p>Добавлен редактор для <code>sitemap.xml</code></p>
+                                <p>Исправлены некоторые баги в работе с базой данных</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <b>Обновление до версии 1.3.1</b>
+                                <p>Обновлен Bootstrap до версии 3.3.4</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <b>Обновление до версии 1.3.0</b>
+                                <p>Обновлен шаблонизатор Smarty до версии 3.1.21.</p>
+                                <p>Исправлена ошибка с переносом слов в ссылке в отзывах для товаров.</p>
+                                <p> Добавлена форма связи с возможностью вставлять её в любую часть сайта - <code>{include file='contact_form.tpl'}</code> - по умолчанию форма уже вставлена в <code>index.tpl</code>.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <b>Обновление до версии 1.2.9.1</b>
+                                <p>Добавлена возможность выбора цветового оформления CMS в Дополнительных настройках</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <b>Обновление до версии 1.2.9</b>
+                                <p>Обновлен Bootstrap до версии 3.3.1. Обновлено оформление CMS. Добавлены дополнительные комментарии в шаблоны. Улучшена безопасность. Исправлены ошибки в названиях товаров и страниц с двойными кавычками. Исправлен баг с z-index в всплывающих окнах. Исправлена ошибка при выборе категории в страницах.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <b>Обновление до версии 1.2.8</b>
+                                <p>Добавлены цены и возможность покупки прямо из списка товаров. Добавлен функционал сравнения товаров. Исправлены мелкие баги. Обновлены комментарии в шаблонах. Добавлено сжатие фотографий при загрузке.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <b>Обновление до версии 1.2.7</b>
+                                <p>Добавлены дополнительные цены в товары с возможностью покупать отталкиваясь от них. Для добавления нового функционала, добавьте в шаблон shop_good.tpl - <code>{include file='shop_good_prices.tpl'}</code></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <b>Обновление до версии 1.2.6</b>
+                                <p>Добавлен мини-поиск по категориям для более удобного выбора.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cl-footer">
+                    <button class="btn" data-action="open-text" data-target="#cms-update-info">Раскрыть</button>
+                </div>
+            </div>
+            <div class="content-panel content-panel--black cms-visites-today">
+                <div class="cl-header">
+                    <p class="cl-title">Посещений за сегодня</p>
+                </div>
+                <div class="cl-content">
+                    <div class="cms-visites-count">9 999 999</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="categories grid-table">
+            <div class="content-panel cms-categories">
+                <div class="cl-header">
+                    <p class="cl-title">Категории страниц</p>
+                </div>
+                <div class="cl-content">
+                    <ul class="cms-categories-list">
+                        <li class="cms-cat-item" id="cms-category-0">
+                            <a href="#?">Тестовая категория 1</a>
+                            <div class="cms-cat-item-stgs">
+                                <a href="#?" data-tooltip="Открыть в новом окне"><i class="fal fa-share"></i></a>
+                                <button class="btn" data-tooltip="Удалить категорию" data-action="delete category" data-id-cat="0"><i class="fal fa-trash-alt"></i></button>
+                            </div>
+                        </li>
+                        <li class="cms-cat-item">
+                            <a href="#?">Тестовая категория 2</a>
+                            <div class="cms-cat-item-stgs">
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+
+    </footer>
+
+    <script src="/js/main.cms.script.js"></script>
+</body>
+</html>
