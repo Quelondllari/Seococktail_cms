@@ -28,7 +28,18 @@ ready(() => {
         }
         if (el != null && an != null)
         switch (an) {
-            case "open-text":
+            case "open_menu":
+                if (tg != null){
+                    if (tg.classList.contains('hr_actv')){
+                        tg.classList.remove('hr_actv');
+                        el.innerHTML = '<i class="fas fa-bars"></i>Меню';
+                    } else {
+                        el.innerHTML = '<i class="fas fa-times"></i>Меню';
+                        tg.classList.add('hr_actv');
+                    }
+                }
+            break;
+            case "open_text":
                 if (tg != null){
                     if (tg.style.maxHeight) {
                         tg.style.maxHeight = null;
@@ -39,7 +50,7 @@ ready(() => {
                     }
                 }
             break;
-            case "open-tab":
+            case "open_tab":
                 if (tg != null){
                     if (tg.style.maxHeight) {
                         tg.style.maxHeight = null;

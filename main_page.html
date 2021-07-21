@@ -14,7 +14,7 @@
 </head>
 <body class="in_bdy">
     <!-- Header (Sidebar) -->
-    <header class="header">
+    <header class="header" id="header">
         <div class="hr_in">
             <a href="/" class="h1 hr_in_lg">
                 SEOCOCKTAIL <span>CMS</span>
@@ -83,7 +83,7 @@
                     <div class="hr_usr_img">
                         <img src="/img/test-photo.png" alt="">
                         <!-- При отсутствии фотографии профиля -->
-                        <!-- <div class="no-photo"></div> -->
+                        <!-- <div class="no_photo"></div> -->
                     </div>
                     <div class="hr_usr_btns">
                         <a href="#?" class="hr_usr_btn"><i class="fal fa-user-cog"></i></a>
@@ -98,6 +98,110 @@
     <!-- Main Content -->
     <main class="main">
         
+        <!-- Main page (Index Page) -->
+        <section class="main_page">
+            <div class="container grid_table">
+                <div class="cms_main_menu">
+                    <button class="btn" data-action="open_menu" data-target="#header"><i class="fas fa-bars"></i>Меню</button>
+                </div>
+                <div class="content_panel cms_breadcrumbs">
+                    <div class="ct_pl_hr">
+                        <h5 class="ct_hr_tl">Главная</h5>
+                        <ul class="ct_hr_bdcs">
+                            <li><a href="#?">Seococktail Cms love</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content_panel cms_update_info">
+                    <div class="ct_pl_hr">
+                        <h5 class="ct_hr_tl ct-hr_tl--bold">Добро пожаловать в SEOCOCKTAIL CMS</h5>
+                    </div>
+                    <div class="ct_pl_ctn" id="cms_update_info">
+                        <strong>Что изменилось:</strong>
+                        <ul>
+                            <li>
+                                <div>
+                                    <b>Обновление до версии 4.0</b>
+                                    <p>Изменен дизайн и заного переработана структура админ. панели</p>
+                                    <p>Обновлены все плагины, некоторые были заменены на более оптимальный вариант</p>    
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <b>Обновление до версии 3.0</b>
+                                    <p> Были проведены работы по рефакторингу всего кода, в результате чего CMS теперь может работать на новых версиях PHP >5.6, что в свою очередь значительно увеличивает скорость работы и дает возможность подключать современные библиотеки для наращивания функционала.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <b>Обновление до версии 2.0</b>
+                                    <p>Добавлена возможность копирования страниц контента.</p>
+                                    <p>Добавлен редактор для <code>robots.txt</code></p>
+                                    <p>Добавлен редактор для <code>sitemap.xml</code></p>
+                                    <p>Исправлены некоторые баги в работе с базой данных</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <b>Обновление до версии 1.3.1</b>
+                                    <p>Обновлен Bootstrap до версии 3.3.4</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <b>Обновление до версии 1.3.0</b>
+                                    <p>Обновлен шаблонизатор Smarty до версии 3.1.21.</p>
+                                    <p>Исправлена ошибка с переносом слов в ссылке в отзывах для товаров.</p>
+                                    <p> Добавлена форма связи с возможностью вставлять её в любую часть сайта - <code>{include file='contact_form.tpl'}</code> - по умолчанию форма уже вставлена в <code>index.tpl</code>.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <b>Обновление до версии 1.2.9.1</b>
+                                    <p>Добавлена возможность выбора цветового оформления CMS в Дополнительных настройках</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <b>Обновление до версии 1.2.9</b>
+                                    <p>Обновлен Bootstrap до версии 3.3.1. Обновлено оформление CMS. Добавлены дополнительные комментарии в шаблоны. Улучшена безопасность. Исправлены ошибки в названиях товаров и страниц с двойными кавычками. Исправлен баг с z-index в всплывающих окнах. Исправлена ошибка при выборе категории в страницах.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <b>Обновление до версии 1.2.8</b>
+                                    <p>Добавлены цены и возможность покупки прямо из списка товаров. Добавлен функционал сравнения товаров. Исправлены мелкие баги. Обновлены комментарии в шаблонах. Добавлено сжатие фотографий при загрузке.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <b>Обновление до версии 1.2.7</b>
+                                    <p>Добавлены дополнительные цены в товары с возможностью покупать отталкиваясь от них. Для добавления нового функционала, добавьте в шаблон shop_good.tpl - <code>{include file='shop_good_prices.tpl'}</code></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <b>Обновление до версии 1.2.6</b>
+                                    <p>Добавлен мини-поиск по категориям для более удобного выбора.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ct_pl_fr">
+                        <button class="btn" data-action="open_text" data-target="#cms_update_info">Раскрыть</button>
+                    </div>
+                </div>
+                <div class="content_panel ct_pl--black cms_visites_today">
+                    <div class="ct_pl_hr">
+                        <h5 class="ct_hr_tl">Посещений за сегодня</h5>
+                    </div>
+                    <div class="ct_pl_ctn">
+                        <div class="cms_visites_count">9 999 999</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <script src="/js/jquery.min.js"></script>
