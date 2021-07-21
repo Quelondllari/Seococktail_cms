@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация / SEOCOCKTAIL CMS</title>
+
+    <!-- <link rel="preload" href="/fonts/OpenSans-Regular.woff2" as="font"> -->
+    <link rel="stylesheet" href="/css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="/css/main.cms.style.css?v=0.0.0.1">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="/css/select2.css">
+</head>
+<body>
+
+    <section class="login_page">
+        <div class="ln_pe_in">
+            <div class="ln_in_cnt">
+                <img src="/img/logo-white.png" class="ln_pe_lg" alt="Seococktail CMS">
+                <h1 class="ln_pe_tl">Вход в панель</h1>
+                <hr class="hr_line">
+                <form action="/" method="POST" id="cms_login_form" class="ln_in_frm">
+                    <!-- Логин -->
+                    <label class="frm_gr" for="cms_fm_login">
+                        <span class="frm_gr_tl">Логин</span>
+                        <input type="text" class="frm_gr_inp" id="cms_fm_login" name="cms_form[Login]" placeholder="Введите логин">
+                        <div class="frm_gr_err">
+                            Не указан логин!
+                        </div>
+                    </label>
+                    <!-- Пароль -->
+                    <label class="frm_gr" for="cms_fm_password">
+                        <span class="frm_gr_tl">Пароль<sup class="frm_gr_ht"><a href="#?">Забыли пароль?</a></sup></span>
+                        <input type="password" class="frm_gr_inp" id="cms_fm_password" name="cms_form[Password]" placeholder="Введите пароль">
+                        <div class="frm_gr_err">
+                            Не введен пароль!
+                        </div>
+                    </label>
+                    <!-- Войти -->
+                    <!--
+                    <button class="btn ln_in_btn" type="submit">
+                        <i class="fal fa-cocktail"></i> Войти
+                    </button> -->
+                    <a href="/main_page.html" class="btn ln_in_btn">
+                        <i class="fal fa-cocktail"></i> Войти
+                    </a>
+                </form>
+                <hr class="hr_line">
+            </div>
+        </div>
+    </section>
+
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/select2.full.min.js"></script>
+    <script src="/js/main.cms.script.js"></script>
+</body>
+</html>
