@@ -1,0 +1,32 @@
+Options -Indexes
+RewriteEngine on
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L,QSA]
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+AddDefaultCharset UTF-8
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access 2 days"
+ExpiresByType image/jpg "access 1 week"
+ExpiresByType image/jpeg "access 1 week"
+ExpiresByType image/gif "access 1 week"
+ExpiresByType image/png "access 1 week"
+ExpiresByType text/css "access 1 week"
+ExpiresByType application/pdf "access 1 week"
+ExpiresByType text/x-javascript "access 1 week"
+ExpiresByType application/x-shockwave-flash "access 1 week"
+ExpiresByType image/x-icon "access 1 week"
+ExpiresByType application/javascript "access 1 week"
+ExpiresByType text/javascript "access 1 week"
+</IfModule>
+
+<ifModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/css text/javascript application/javascript application/x-javascript application/x-font-otf application/x-font-truetype application/x-font-ttf
+</ifModule>
