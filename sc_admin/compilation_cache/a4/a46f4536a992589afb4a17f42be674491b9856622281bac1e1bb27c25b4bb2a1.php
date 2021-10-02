@@ -57,6 +57,6 @@ class __TwigTemplate_0bc5088547cabebe57d75b3c733dfb31cdc8bdaa1091d1d62ccd72ee3a5
 
     public function getSourceContext()
     {
-        return new Source("<p>Всем привет, я только проснулся, {{ name }}</p>", "@admin/index.html", "C:\\OpenServer\\domains\\SEOCocktail\\sc_admin\\layouts\\index.html");
+        return new Source("<p>Всем привет, я только проснулся, {{ name }}</p>", "@admin/index.html", "C:\\OpenServer\\domains\\SEOCocktail\\sc_admin\\views\\index.html");
     }
 }

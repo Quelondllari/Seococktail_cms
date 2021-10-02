@@ -10,30 +10,29 @@
     }
 
     /*
+        [Глобальный путь до сайта]
+     */
+    define("ROOT", $_SERVER['DOCUMENT_ROOT']);
+
+    /*
         [Параметры для подключения к базе данных]
     */
     define("DB_HOST", "localhost");
-    define("DB_NAME", "db_seococktailcms");
-    define("DB_USERNAME", "root");
-    define("DB_PASSWORD", "");
+    define("DB_NAME", "i-dez_print");
+    define("DB_USERNAME", "046429951_print");
+    define("DB_PASSWORD", "bRC2H5!eu6CP");
     define("DB_CHARSET", "utf8");
-
-    /*
-        [Глобальный путь до папки с сайтом]
-    */
-    define("DOC_ROOT", $_SERVER['DOCUMENT_ROOT']);
-
 
     /*
         [Подключение Twig шаблонизатора]
     */
-    require_once DOC_ROOT . '/vendor/autoload.php';
+    require_once ROOT . '/vendor/autoload.php';
     Twig_Autoloader::register();
     $loader = new Twig_Loader_Filesystem();
     /* Пространство admin - для шаблонов страниц админстраторской панели */
-    $loader->addPath(DOC_ROOT . '/sc_admin/layouts', 'admin');
+    $loader->addPath(ROOT . '/sc_admin/views', 'admin');
     /* Пространоство site - для шаблонов страниц сайта */
-    $loader->addPath(DOC_ROOT . '/layouts', 'site');
+    $loader->addPath(ROOT . '/views', 'site');
     $twig = new Twig_Environment($loader, array('cache' => 'compilation_cache', 'debug' => true));
 
 

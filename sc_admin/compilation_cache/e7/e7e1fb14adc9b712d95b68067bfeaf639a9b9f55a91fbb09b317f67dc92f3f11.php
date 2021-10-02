@@ -26,6 +26,39 @@ class __TwigTemplate_18a6101c2cd98333380047835646aaf7603a6968601e783564f28055369
 
     protected function doDisplay(array $context, array $blocks = [])
     {
+        // line 1
+        echo "<section class=\"login_page\">
+    <div class=\"ln_pe_in\">
+        <div class=\"ln_in_cnt\">
+            <img src=\"/sc_admin/assets/img/logo-white.png\" class=\"ln_pe_lg\" alt=\"Seococktail CMS\">
+            <h1 class=\"ln_pe_tl\">Вход в панель</h1>
+            <hr class=\"hr_line\">
+            <form action=\"/sc_admin/actions/sc_login.php\" data-typeform=\"sc_login\" method=\"POST\" id=\"sc_login_form\" class=\"ln_in_frm sc_form\">
+                <!-- Логин -->
+                <label class=\"frm_gr\" for=\"sc_fm_login\">
+                    <span class=\"frm_gr_tl\">Логин</span>
+                    <input type=\"text\" class=\"frm_gr_inp\" id=\"sc_fm_login\" name=\"sc_form[Login][check]\" placeholder=\"Введите логин\">
+                    <div class=\"frm_gr_err\">
+<!--                        Не указан логин!-->
+                    </div>
+                </label>
+                <!-- Пароль -->
+                <label class=\"frm_gr\" for=\"sc_fm_password\">
+                    <span class=\"frm_gr_tl\">Пароль<sup class=\"frm_gr_ht\"><a href=\"#?\">Забыли пароль?</a></sup></span>
+                    <input type=\"password\" class=\"frm_gr_inp\" id=\"sc_fm_password\" name=\"sc_form[Password]\" placeholder=\"Введите пароль\">
+                    <div class=\"frm_gr_err\">
+<!--                        Не введен пароль!-->
+                    </div>
+                </label>
+                <!-- Войти -->
+                <button class=\"btn ln_in_btn\" type=\"submit\">
+                    <i class=\"fal fa-cocktail\"></i> Войти
+                </button>
+            </form>
+            <hr class=\"hr_line\">
+        </div>
+    </div>
+</section>";
     }
 
     public function getTemplateName()
@@ -35,7 +68,7 @@ class __TwigTemplate_18a6101c2cd98333380047835646aaf7603a6968601e783564f28055369
 
     public function getDebugInfo()
     {
-        return array ();
+        return array (  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -48,6 +81,37 @@ class __TwigTemplate_18a6101c2cd98333380047835646aaf7603a6968601e783564f28055369
 
     public function getSourceContext()
     {
-        return new Source("", "@admin/login.html", "C:\\OpenServer\\domains\\SEOCocktail\\sc_admin\\layouts\\login.html");
+        return new Source("<section class=\"login_page\">
+    <div class=\"ln_pe_in\">
+        <div class=\"ln_in_cnt\">
+            <img src=\"/sc_admin/assets/img/logo-white.png\" class=\"ln_pe_lg\" alt=\"Seococktail CMS\">
+            <h1 class=\"ln_pe_tl\">Вход в панель</h1>
+            <hr class=\"hr_line\">
+            <form action=\"/sc_admin/actions/sc_login.php\" data-typeform=\"sc_login\" method=\"POST\" id=\"sc_login_form\" class=\"ln_in_frm sc_form\">
+                <!-- Логин -->
+                <label class=\"frm_gr\" for=\"sc_fm_login\">
+                    <span class=\"frm_gr_tl\">Логин</span>
+                    <input type=\"text\" class=\"frm_gr_inp\" id=\"sc_fm_login\" name=\"sc_form[Login][check]\" placeholder=\"Введите логин\">
+                    <div class=\"frm_gr_err\">
+<!--                        Не указан логин!-->
+                    </div>
+                </label>
+                <!-- Пароль -->
+                <label class=\"frm_gr\" for=\"sc_fm_password\">
+                    <span class=\"frm_gr_tl\">Пароль<sup class=\"frm_gr_ht\"><a href=\"#?\">Забыли пароль?</a></sup></span>
+                    <input type=\"password\" class=\"frm_gr_inp\" id=\"sc_fm_password\" name=\"sc_form[Password]\" placeholder=\"Введите пароль\">
+                    <div class=\"frm_gr_err\">
+<!--                        Не введен пароль!-->
+                    </div>
+                </label>
+                <!-- Войти -->
+                <button class=\"btn ln_in_btn\" type=\"submit\">
+                    <i class=\"fal fa-cocktail\"></i> Войти
+                </button>
+            </form>
+            <hr class=\"hr_line\">
+        </div>
+    </div>
+</section>", "@admin/login.html", "C:\\OpenServer\\domains\\SEOCocktail\\sc_admin\\views\\login.html");
     }
 }

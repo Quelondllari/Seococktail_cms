@@ -1,0 +1,81 @@
+/*#region Font-face (usable on VS Code)*/
+/* 
+ * Exo 2
+ * https://fonts.google.com/specimen/Exo+2?query=Exo+2
+*/
+@font-face {
+    font-family: 'Exo2';
+    src: local('Exo 2 Regular'), 
+    url('/sc_admin/assets/fonts/Exo2-Regular.woff2') format('woff2'),
+    url('/sc_admin/assets/fonts/Exo2-Regular.woff') format('woff'),
+    url('/sc_admin/assets/fonts/Exo2-Regular.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Exo2';
+    src: local('Exo 2 Medium'), 
+    url('/sc_admin/assets/fonts/Exo2-Medium.woff2') format('woff2'),
+    url('/sc_admin/assets/fonts/Exo2-Medium.woff') format('woff'),
+    url('/sc_admin/assets/fonts/Exo2-Medium.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Exo2';
+    src: local('Exo 2 SemiBold'), 
+    url('/sc_admin/assets/fonts/Exo2-SemiBold.woff2') format('woff2'),
+    url('/sc_admin/assets/fonts/Exo2-SemiBold.woff') format('woff'),
+    url('/sc_admin/assets/fonts/Exo2-SemiBold.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Exo2';
+    src: local('Exo 2 Bold'), 
+    url('/sc_admin/assets/fonts/Exo2-Bold.woff2') format('woff2'),
+    url('/sc_admin/assets/fonts/Exo2-Bold.woff') format('woff'),
+    url('/sc_admin/assets/fonts/Exo2-Bold.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 
+ * Open Sans
+ * https://fonts.google.com/specimen/Open+Sans?query=Open+Sans
+*/
+@font-face {
+    font-family: 'OpenSans';
+    src: local('Open Sans Regular'), 
+    url('/sc_admin/assets/fonts/OpenSans-Regular.woff2') format('woff2'),
+    url('/sc_admin/assets/fonts/OpenSans-Regular.woff') format('woff'),
+    url('/sc_admin/assets/fonts/OpenSans-Regular.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: local('Open Sans SemiBold'), 
+    url('/sc_admin/assets/fonts/OpenSans-SemiBold.woff2') format('woff2'),
+    url('/sc_admin/assets/fonts/OpenSans-SemiBold.woff') format('woff'),
+    url('/sc_admin/assets/fonts/OpenSans-SemiBold.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'OpenSans';
+    src: local('Open Sans Bold'), 
+    url('/sc_admin/assets/fonts/OpenSans-Bold.woff2') format('woff2'),
+    url('/sc_admin/assets/fonts/OpenSans-Bold.woff') format('woff'),
+    url('/sc_admin/assets/fonts/OpenSans-Bold.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+}
+/*#endregion*/

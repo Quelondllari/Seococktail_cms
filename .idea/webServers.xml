@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="59b3e5b9-cfc0-48fe-9b7d-cabd92cab4ad" name="Seocms">
+        <fileTransfer rootFolder="/print.db33.ru" accessType="SFTP" host="i-dez.myjino.ru" port="2222" sshConfigId="97eb7c50-7af0-4660-b420-fc82e7531c01" sshConfig="i-dez_user5@i-dez.myjino.ru:2222 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

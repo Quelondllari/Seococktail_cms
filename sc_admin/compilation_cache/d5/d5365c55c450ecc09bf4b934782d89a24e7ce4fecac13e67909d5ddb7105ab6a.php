@@ -50,6 +50,6 @@ class __TwigTemplate_14b6360ee616a04394ebfe6fd2f8f892150e9b9082788cadb758ba60e25
 
     public function getSourceContext()
     {
-        return new Source("", "@admin/index.html", "C:\\OpenServer\\domains\\SEOCocktail\\sc_admin\\layouts\\index.html");
+        return new Source("", "@admin/index.html", "C:\\OpenServer\\domains\\SEOCocktail\\sc_admin\\views\\index.html");
     }
 }

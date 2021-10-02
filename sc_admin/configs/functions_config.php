@@ -22,4 +22,28 @@
             return $_param_sql->fetchColumn();
         }
 
+        public function sanitize_data()
+        {
+            array_walk_recursive($_POST, function ($value){
+                $value = trim($value);
+                $value = stripcslashes($value);
+                $value = htmlspecialchars($value);
+            });
+            array_walk_recursive($_GET, function ($value){
+                $value = trim($value);
+                $value = stripcslashes($value);
+                $value = htmlspecialchars($value);
+            });
+        }
+
+        public function generate_password($length = 8) {
+            $alphabet = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $_pass = "";
+            $_max = mb_strlen($alphabet, '8bit') - 1;
+            for ($i = 0; $i < $length; ++$i) {
+                $_pass .= $alphabet[random_int(0, $_max)];
+            }
+
+            return $_pass;
+        }
     }

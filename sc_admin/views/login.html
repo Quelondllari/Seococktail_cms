@@ -1,0 +1,34 @@
+<section class="login_page">
+    <div class="ln_pe_in">
+        <div class="ln_in_cnt">
+            <img src="/sc_admin/assets/img/logo-white.png" class="ln_pe_lg" alt="Seococktail CMS">
+            <h1 class="ln_pe_tl">Вход в панель</h1>
+            <hr class="hr_line">
+            <form action="/sc_admin/actions/sc_login.php" data-typeform="sc_login" method="POST" id="sc_login_form" class="ln_in_frm sc_form">
+                <!-- Логин -->
+                <label class="frm_gr" for="sc_fm_login">
+                    <span class="frm_gr_tl">Логин</span>
+                    <input type="text" class="frm_gr_inp" id="sc_fm_login" name="sc_form[login]" placeholder="Введите логин">
+                    <div class="frm_gr_err">
+<!--                        Не указан логин!-->
+                    </div>
+                </label>
+                <!-- Пароль -->
+                <label class="frm_gr" for="sc_fm_password">
+                    <span class="frm_gr_tl">Пароль<sup class="frm_gr_ht"><a href="/sc_admin/recovery">Забыли пароль?</a></sup></span>
+                    <input type="password" class="frm_gr_inp" id="sc_fm_password" name="sc_form[password]" placeholder="Введите пароль">
+                    <div class="frm_gr_err">
+<!--                        Не введен пароль!-->
+                    </div>
+                </label>
+                <!-- Войти -->
+                <button class="btn ln_in_btn" type="submit">
+                    <i class="fal fa-cocktail"></i> Войти
+                </button>
+
+                <div class="frm_err"></div>
+            </form>
+            <hr class="hr_line">
+        </div>
+    </div>
+</section>
